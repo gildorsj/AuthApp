@@ -25,7 +25,7 @@ export default function FazerLogin(props) {
             setError("Insira seu endereço de email");
             setValid(false);
             return;
-        } else if (!password && password.trim() && password.length > 6) {
+        } else if (password.length < 6) {
             setError("Senha curta, ela tem pelo menos 6 caracteres");
             setValid(false);
             return;

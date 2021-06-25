@@ -25,7 +25,7 @@ export default function CriarConta(props) {
             setError("Insira um endereço de email");
             setValid(false);
             return;
-        } else if (!password && password.trim() && password.length > 6) {
+        } else if (password.length < 6) {
             setError("Senha curta, ela precisa ter pelo menos 6 caracteres");
             setValid(false);
             return;
